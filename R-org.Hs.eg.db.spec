@@ -11,14 +11,15 @@ License:          Artistic-2.0
 URL:              http://bioconductor.org/packages/release/data/annotation/html/%{packname}.html
 Source0:          http://bioconductor.org/packages/release/data/annotation/src/contrib/%{packname}_%{version}.tar.gz
 BuildArch:        noarch
-Requires:         R-core R-methods R-AnnotationDbi R-annotate
+Requires:         R-core
+Requires:         R-methods R-AnnotationDbi R-annotate
 %if %{without bootstrap}
 Requires:         R-hgu95av2.db
 %endif
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-methods
-BuildRequires:    R-AnnotationDbi R-annotate
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex
+BuildRequires:    R-methods R-AnnotationDbi R-annotate
 %if %{without bootstrap}
-BuildRequires:    R-methods R-AnnotationDbi R-hgu95av2.db R-annotate
+BuildRequires:    R-hgu95av2.db
 %endif
 
 %description
